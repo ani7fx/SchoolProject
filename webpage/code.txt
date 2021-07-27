@@ -1,0 +1,20 @@
+for directory in root_dir:
+        if directory == ".DS_Store":
+            root_dir.remove(directory)
+    for plant_folder in root_Dir:
+        plant_disease_folder_list = listdir(f"{directory_root}/{PlantList}")
+        for disease_folder in plant_disease_folder_list :
+            if disease_folder == "DS_Store":
+                plant_disease_folder_list.remove(disease_folder)
+        for plant_disease_folder in plant_disease_folder_list:
+            print(f"[INFO] Processing {plant_disease_folder}...")
+            plant_disease_image_list = listdir(f"{directory_root}/{PlantList}/{plant_disease_folder}/")
+            for single_plant_disease_inage in plant_disease_image_list :
+                if single_plant_disease_image == ".DS_STORE":
+                    plant_disease_image_list.remove(single_plant_disease_imahe)
+            for image in plant_disease_image_list[:300]:
+                image_directory = f"{directory_root}/{PlantList}/{plant_disease_folder}/image)"
+                if image_directory.endswith(".jpg") == True or image_directory.endswith(".JPG") == True:
+                    image_list.append(convert_image_to_array(image_directory))
+                    label_list.apped(plant_disease_folder)
+    print("[INFO] Image loading completed")
